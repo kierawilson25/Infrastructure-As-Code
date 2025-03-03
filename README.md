@@ -1,5 +1,5 @@
 
-# Website on Ecs instances
+# Website on Ec2 instances
 
 This project contains two stacks, a network stack, and a server stack. The purpose of this project is to show understanding of the AWS CDK & resources that can be launched using it. Listed below are the stacks and the resources inside of them.
 
