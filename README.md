@@ -1,17 +1,21 @@
 
-# Welcome to your CDK Python project!
+# Website on Ecs instances
 
-This is a blank project for CDK development with Python.
+This project contains two stacks, a network stack, and a server stack. The purpose of this project is to show understanding of the AWS CDK & resources that can be launched using it. Listed below are the stacks and the resources inside of them.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Network Stack (cdk_assignment_stack.py)
+- One public and one private subnet in one AZ
+- One public and one private subnet in a different AZ
 
-This project is set up like a standard Python project.  The initialization
-process also creates a virtualenv within this project, stored under the `.venv`
-directory.  To create the virtualenv it assumes that there is a `python3`
-(or `python` for Windows) executable in your path with access to the `venv`
-package. If for any reason the automatic creation of the virtualenv fails,
-you can create the virtualenv manually.
+## Server Stack (cdk_server_stack.py)
+- One EC2 webserver launched in each of the public subnets 
+- An RDS instance with MYSQL engine with all private subnets as its subnet group
+- A security group for the web server that opens port 80 from anywhere 
+- A security group for the RDS instance that opens port 3306 to the web server security group
 
+
+
+### CDK Instructions
 To manually create a virtualenv on MacOS and Linux:
 
 ```
